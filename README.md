@@ -140,7 +140,7 @@ add_features(train, test)  # 添加衍生特征
 
 ### 5. 类别特征编码
 ```python
-cat_feature_encoder(train, test, *,encoder)  # encoder可选'label'或'onehot'
+cat_feature_encoder(train, test, encoder)  # 支持 'label' 或 'onehot'
 ```
 ### 6. 特征选择
 ```python
@@ -249,12 +249,11 @@ python main.py
 3. **模型解释性**：集成 SHAP 值分析，提升模型业务可解释性
 4. **API 部署**：使用 FastAPI 封装模型，实现实时预测服务
 
-4. **处理类别不平衡问题（SMOTE, 欠采样等）**
 ## 许可证
-
+本项目遵循 [MIT License](LICENSE) 开源协议。
 
 ## 联系方式
-如有问题或建议，请提交 Issue 。 
+如有问题或建议，欢迎提交 Issue  或 PR 进行交流。 
 
 ## 致谢
 
