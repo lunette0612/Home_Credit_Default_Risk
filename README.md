@@ -166,7 +166,7 @@ knn_svc_HPO(X,y)   # KNN & SVM 网格搜索调参
 ```
 ### 8. Stacking 集成模型
 ```python
-model_ensemble(X,y,new_main_model,knn_pipeline,GAUSS_pipeline,lr_pipeline,evaluate=True,svm_pipeline=None)  # 构建Stacking集成,svm默认不使用
+model_ensemble(X,y,knn_pipeline,new_main_model,GAUSS_pipeline,lr_pipeline,evaluate=True,svm_pipeline=None)  # 构建Stacking集成,svm默认不使用
 ```
 **基学习器：**
 
