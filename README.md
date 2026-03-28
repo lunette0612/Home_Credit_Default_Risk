@@ -13,7 +13,7 @@
 ## 🌟 项目亮点
 
 - ✅ **内存优化**：自定义 `reduce_mem_usage` 函数，内存占用降低 70%+
-- ✅ **多表融合**：整合 7 个数据表，构建 50+ 业务特征
+- ✅ **多表融合**：整合 7 个数据表，手动构建 50+ 业务特征
 - ✅ **集成学习**：Stacking 融合 5 个基模型，提升泛化能力
 - ✅ **完整 Pipeline**：从数据清洗到模型部署的全流程实现
 - ✅ **可复现**：固定随机种子，代码结构清晰，便于扩展
@@ -166,7 +166,7 @@ knn_svc_HPO(X,y)   # KNN & SVM 网格搜索调参
 ```
 ### 8. Stacking 集成模型
 ```python
-model_ensemble(X,y,new_main_model,knn_pipeline,lr_pipeline,evaluate=True,svm_pipeline=None)  # 构建Stacking集成,svm默认不使用
+model_ensemble(X,y,new_main_model,knn_pipeline,GAUSS_pipeline,lr_pipeline,evaluate=True,svm_pipeline=None)  # 构建Stacking集成,svm默认不使用
 ```
 **基学习器：**
 
@@ -183,7 +183,7 @@ Logistic Regression
 
 > 默认迭代次数不足以收敛，代码中max_iter=3000
 
-**交叉验证：** StratifiedKFold (n_splits=2)
+**交叉验证：** StratifiedKFold (n_splits=3)
 ### 9. 预测与输出
 ```python
 #集成模型预测
